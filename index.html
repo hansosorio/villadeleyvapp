@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- URL Edit MAP:
+  https://mapsengine.google.com/map/edit?mid=zVO5_3s4lXW8.kChsOpLBBDdM
+  
+  
+  
+  
+  
+  
+  [{"id":"29","latitud":"5.647139120852246","logitud":"-73.51664953871958","nombre":"Camping san Jorge","direccion":"Kilometro 1","horario":"","facebook":"","paginaweb":"","foto":"","descripcion":"Zona de Camping ","telefono":"0","tipo":"103","recurso":"","tiposobresaliente":"0"},{"id":"252","latitud":"5.635789993236192","logitud":"-73.5252901343174","nombre":"Molino del balcon Camping","direccion":"Carrera 12a # 11- 51","horario":"Continuo 24-7","facebook":"","paginaweb":"","foto":"","descripcion":"Camping","telefono":"0","tipo":"103","recurso":"","tiposobresaliente":"0"},{"id":"292","latitud":"5.6345510977662645","logitud":"-73.52835930537324","nombre":"Zona de camping","direccion":"Carrera 10 # 10 - 04","horario":"","facebook":"","paginaweb":"","foto":"","descripcion":"Camping","telefono":"0","tipo":"103","recurso":"","tiposobresaliente":"0"},{"id":"371","latitud":"5.629863989710891","logitud":"-73.52110076187263","nombre":"Casa quinta la pepita camping","direccion":"Carrera 7 # 10 - 86","horario":"","facebook":"","paginaweb":"","foto":"","descripcion":"Camping","telefono":"0","tipo":"103","recurso":"","tiposobresaliente":"0"}]
+  -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>Villa de LeyvApp - Mapa turistico del municipio</title>
+
+    <link rel="stylesheet" type="text/css" href="/media/css/style.css" />
+    <style type="text/css" >
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_canvas { height: 100% }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<!--<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true&callback=initialize"></script>-->
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
+    <!--<script type="text/javascript"
+      	src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCY8f4jmbA-TKJLwmA65LP8aesAE4X2M2U&sensor=TRUE">
+    </script>-->
+    <!--<script type="text/javascript"
+    	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY8f4jmbA-TKJLwmA65LP8aesAE4X2M2U&sensor=TRUE">
+    </script>-->
+    <script type="text/javascript">
+	
+    var map;
+    var markers = [];
+    var infoWindow;
+    var locationSelect;
+	var MY_MAPTYPE_ID = 'custom_style';
+	//mapTypeId: google.maps.MapTypeId.ROADMAP
+
+	//cargar menu de navegacion
+	//$('#navegacion').load("/module/menu.html");
+
+
+        (function(){
+          function loadChartbeat() {
+            window._sf_endpt=(new Date()).getTime();
+            var e = document.createElement('script');
+            e.setAttribute('language', 'javascript');
+            e.setAttribute('type', 'text/javascript');
+            e.setAttribute('src', '/js/general.js');
+            document.body.appendChild(e);
+          }
+        })();
+    
+
+    </script>
+  </head>
+	<body onload="initialize()">
+		<center>
+        <img src="/media/images/progress.jpg" style="position: fixed; z-index: 2; display: block;width: 100px;height: 100px;" id="progress">
+        </center>
+		<div id="wrapper-container">
+	<!--<div> <input type="checkbox" onClick="javascript:zoom(5);" >Click me!!!</input></div>
+    
+    <div>
+     <input type="text" id="addressInput" size="10"/>
+    <select id="radiusSelect">
+      <option value="25" selected>25mi</option>
+      <option value="100">100mi</option>
+      <option value="200">200mi</option>
+    </select>
+
+    <input type="button" onclick="searchLocations()" value="Search"/>
+    </div>
+    <div><select id="locationSelect" style="width:100%;visibility:hidden"></select></div>
+    -->
+		    <div id="navegacion" class="navegacion" >
+	            <div class="down-arrow" onclick="javascript:$('#m_desplegado').toggle()"></div>
+            	<div>                
+                    <div id="m_desplegado">
+                        <!--<label onclick="javascript:$('#m_hospedaje').toggle()">Hospedaje</label><br />-->
+                        <!--<div id="m_hospedaje"> <!-- Hospedaje -->
+                            <input name="item" type="radio" value="101" onclick="javascript:changeFilter(this);" >Hoteles<br />
+                            <input name="item" type="radio" value="102" onclick="javascript:changeFilter(this);" >Hostales<br />
+                            <input name="item" type="radio" value="103" onclick="javascript:changeFilter(this);" >Campings<br />
+                        <!--</div>-->
+                        <input name="item" type="radio" value="200" onclick="javascript:changeFilter(this);" >Inter&eacute;s cultural<br />
+                        <input name="item" type="radio" value="300" onclick="javascript:changeFilter(this);" >Aventura/Recreación<br />
+                        <input name="item" type="radio" value="400" onclick="javascript:changeFilter(this);" >Antesanias/Souveniers<br />
+                        <input name="item" type="radio" value="500" onclick="javascript:changeFilter(this);" >Restaurantes<br />
+                        <input name="item" type="radio" value="600" onclick="javascript:changeFilter(this);" >Comilona y cafes<br />
+                        <input name="item" type="radio" value="700" onclick="javascript:changeFilter(this);" >Inter&eacute;s general<br />
+                        <!--<input name="item" type="radio" value="" onclick="javascript:changeFilter(this);" ><br />-->
+                    </div>
+                </div>
+            </div>
+     		<div id="map_canvas" style="width:100%; height:100%"></div>
+		</div>
+	</body>
+</html>

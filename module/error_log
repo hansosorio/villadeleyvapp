@@ -1,0 +1,11 @@
+[16-Aug-2014 18:04:57] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/villadel/public_html/modulos/cliente.php on line 35
+[16-Aug-2014 18:06:15] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/villadel/public_html/modulos/cliente.php on line 35
+[16-Aug-2014 18:06:22] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/villadel/public_html/modulos/cliente.php on line 35
+[16-Aug-2014 18:06:33] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/villadel/public_html/modulos/cliente.php on line 35
+[16-Aug-2014 18:06:34] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/villadel/public_html/modulos/cliente.php on line 35
+[16-Aug-2014 18:07:14] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/villadel/public_html/modulos/cliente.php on line 35
+[16-Aug-2014 18:07:16] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/villadel/public_html/modulos/cliente.php on line 35
+[16-Aug-2014 18:07:17] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/villadel/public_html/modulos/cliente.php on line 35
+[16-Aug-2014 18:07:41] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Unknown MySQL server host 'http' (1) in /home/villadel/public_html/modulos/cliente.php on line 12
+[16-Aug-2014 18:07:44] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Unknown MySQL server host 'http' (1) in /home/villadel/public_html/modulos/cliente.php on line 12
+[16-Aug-2014 18:09:12] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'villadel'@'die.diezymedios.com' (using password: YES) in /home/villadel/public_html/modulos/cliente.php on line 12
